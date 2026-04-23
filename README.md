@@ -1,2 +1,2 @@
-When downloaded run cmd.cmd 
+When downloaded run `Launcher.cmd`
 and choose obs as the cam
