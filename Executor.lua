@@ -7,6 +7,12 @@ local Window = WindUI:CreateWindow({
     Icon = "file-video-camera", -- lucide icon. optional
     Author = "by BROTHAISHACKIER", -- optional
 })
+Window:Tag({
+    Title = "v1.2.0",
+    Icon = "github",
+    Color = Color3.fromHex("#30ff6a"),
+    Radius = 0, -- from 0 to 13
+})
 
 local settings = {
 	camera = {
@@ -235,7 +241,7 @@ CT:Input({
     Value = "160",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
-    Placeholder = "Put the same as python script",
+    Placeholder = "Put the same as `Settings.json`",
     Callback = function(input) 
         local inp = tonumber(input)
 		if inp then
@@ -249,7 +255,7 @@ CT:Input({
     Value = "90",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
-    Placeholder = "Put the same as python script",
+    Placeholder = "Put the same as `Settings.json`",
     Callback = function(input) 
         local inp = tonumber(input)
 		if inp then
@@ -263,13 +269,23 @@ CT:Input({
     Value = "10",
     InputIcon = "bird",
     Type = "Input", -- or "Textarea"
-    Placeholder = "Put the same as python script",
+    Placeholder = "Put the same as `Settings.json`",
     Callback = function(input) 
         local inp = tonumber(input)
 		if inp then
 			settings.camera.FPS = inp
 		end
     end
+})
+CT:Paragraph({
+    Title = "Notice",
+    Desc = "Feed Width, Feed Height and Feed FPS has to match `Settings.json`",
+    Color = "Red",
+    Image = "",
+    ImageSize = 30,
+    Thumbnail = "",
+    ThumbnailSize = 80,
+    Locked = false
 })
 
 local function Color3FromRGB(r, g, b)
