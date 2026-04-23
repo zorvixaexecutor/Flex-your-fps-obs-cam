@@ -1,0 +1,1 @@
+start "" powershell -ExecutionPolicy Bypass -File ".\Run.ps1"

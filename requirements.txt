@@ -1,0 +1,4 @@
+Flask
+opencv-python
+pywin32
+pygrabber
